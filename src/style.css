@@ -42,7 +42,7 @@ nav {
 nav > div {
     width: 100px;
     height: 60%;
-    border: 1px solid black;
+    border: 2px solid lightblue;
     border-bottom: 0px;
 
     border-radius: 10px 10px 0px 0px;
@@ -52,9 +52,16 @@ nav > div {
     padding-top: 10px;
 }
 
-/* nav > div:hover {
-    border: 4px solid red;
-} */
+nav > div:hover {
+    border-color: lightskyblue;
+    box-shadow: 0 0 12px lightskyblue;
+    transition: 0.3s;
+    outline: none;
+}
+
+.selected {
+    background-color: lightgreen;
+}
 
 #home-content {
     position: relative;

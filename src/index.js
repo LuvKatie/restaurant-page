@@ -1,14 +1,11 @@
 import { homePage } from './homepage.js';
+import { menuPage } from './menu.js';
 import './style.css';
 
 let createPage = (function () {
     // Background image
     const bgContainer = document.createElement('div');
     bgContainer.setAttribute('id', 'bg-container');
-
-    // const backgroundImg = document.createElement('img');
-    // backgroundImg.setAttribute('src', 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/03/18/0/FNK_HOT_POT_AT_HOME_OPENER_H_f_s4x3.jpg.rend.hgtvcom.826.620.suffix/1616107469470.jpeg');
-    // backgroundImg.setAttribute('id', 'background-img');
 
     // Create entire page default layout
     const header = document.createElement('header');
@@ -41,12 +38,19 @@ let createPage = (function () {
 
         if(navChildren[i] == navChildren[0]) {
             navChildren[0].innerHTML = 'Home';
+            navChildren[0].classList.add('home-tab');
         } else if(navChildren[i] == navChildren[1]) {
             navChildren[1].innerHTML = 'Menu';
+            navChildren[1].classList.add('menu-tab');
         } else {
             navChildren[2].innerHTML = 'Contact';
+            navChildren[2].classList.add('contact-tab');
         }
     }
+
+    // Hook event listeners for each tab on Header
+    const menuSelect = document.querySelector('.menu-tab');
+    menuSelect.addEventListener('click', menuPage);
 })();
 
 homePage();
