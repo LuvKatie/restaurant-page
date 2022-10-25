@@ -2,6 +2,14 @@ import { homePage } from './homepage.js';
 import './style.css';
 
 let createPage = (function () {
+    // Background image
+    const bgContainer = document.createElement('div');
+    bgContainer.setAttribute('id', 'bg-container');
+
+    // const backgroundImg = document.createElement('img');
+    // backgroundImg.setAttribute('src', 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/03/18/0/FNK_HOT_POT_AT_HOME_OPENER_H_f_s4x3.jpg.rend.hgtvcom.826.620.suffix/1616107469470.jpeg');
+    // backgroundImg.setAttribute('id', 'background-img');
+
     // Create entire page default layout
     const header = document.createElement('header');
     const navBar = document.createElement('nav');
@@ -11,10 +19,11 @@ let createPage = (function () {
     
     const contentDiv = document.createElement('div');
     const footer = document.createElement('footer');
-    
-    document.body.append(header, contentDiv, footer);
 
-    contentDiv.setAttribute('id', 'content');
+    // bgContainer.appendChild(backgroundImg);
+    document.body.append(header, contentDiv, footer, bgContainer);
+
+    contentDiv.setAttribute('id', 'home-content');
     
     // Create Header children and adding classess
     const selectHeader = document.querySelector('header');
@@ -40,4 +49,4 @@ let createPage = (function () {
     }
 })();
 
-// homePage();
+homePage();

@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    grid-template: 1fr 12fr 1fr / 1fr 2.5fr 1fr;
+    grid-template: 1fr 12fr 1fr / 1fr 1.6fr 1fr;
 
     height: 100vh;
     width: 100vw;
@@ -26,12 +26,13 @@ header {
 
     width: 100%;
     height: 100%;
-    border: 1px solid lightblue;
+    
+    background-color: snow;
 }
 
 nav {
     display: flex;
-    width: 20%;
+    width: 19%;
     height: 100%;
 
     justify-content: space-between;
@@ -40,20 +41,48 @@ nav {
 
 nav > div {
     width: 100px;
-    height: 63%;
+    height: 60%;
     border: 1px solid black;
     border-bottom: 0px;
 
+    border-radius: 10px 10px 0px 0px;
+
     text-align: center;
+
+    padding-top: 10px;
 }
 
-#content {
+/* nav > div:hover {
+    border: 4px solid red;
+} */
+
+#home-content {
+    position: relative;
+
+    display: grid;
+
+    grid-template: 2fr repeat(3, 4fr) / 1fr;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
 
     width: 100%;
     height: 90%;
-    border: 1px solid red;
+    
+    border-radius: 80px;
+    background-color: AliceBlue;
+    opacity: 0.8;
+}
+
+#bg-container {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/52d3fafee4b03c7eaedee15f/c523fb53-2812-4cf3-8ef6-9b8036d04914/after-7576.jpg);
 }
 
 footer {
@@ -62,5 +91,6 @@ footer {
 
     width: 100%;
     height: 100%;
-    border: 1px solid sandybrown;
+
+    background-color: snow;
 }
