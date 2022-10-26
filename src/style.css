@@ -101,3 +101,37 @@ footer {
 
     background-color: snow;
 }
+
+/* Home Content */
+
+.home.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home.header > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 77%;
+    height: 60%;
+    border: 5px solid springgreen;
+    background-color: palegreen;
+
+    border-radius: 12px;
+
+    padding: 5px 10px;
+    color: firebrick;
+}
+
+.home.header > div > img {
+    margin: 0px 12px;
+    transform: rotate(20deg);
+}
+
+.home.header > div > h1 {
+    margin: 0;
+}
