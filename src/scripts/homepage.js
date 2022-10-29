@@ -1,7 +1,11 @@
 import HotPot from '../hot-pot.png';
 
 export function homePage() {
-    const homeContent = document.getElementById('home-content');
+    const selectContent = document.getElementById('content');
+
+    selectContent.classList.add('home-content');
+
+    const homeContent = document.querySelector('.home-content');
     const homeHeader = document.createElement('div');
     const homeDesc = document.createElement('div');
     const homeHours = document.createElement('div');
@@ -35,8 +39,4 @@ export function homePage() {
     homeHeaderH1.innerHTML = 'Katie and Tony\'s Hot Pot';
 
     homeHeaderSelect.append(homeHeaderH1, hotpotIcon);
-
-    // Divs / Containers of ' Home '
-    const homeDescSelect = document.querySelector('.home2');
-    
 }

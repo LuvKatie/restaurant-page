@@ -1,5 +1,5 @@
 import { homePage } from './homepage.js';
-import { menuPage } from './menu.js';
+import { menuPage } from './menupage.js';
 import '../styles/style.css';
 import '../styles/homepage.css';
 import '../styles/menupage.css';
@@ -23,7 +23,7 @@ let createPage = (function () {
     // bgContainer.appendChild(backgroundImg);
     document.body.append(header, contentDiv, footer, bgContainer);
 
-    contentDiv.setAttribute('id', 'home-content');
+    contentDiv.setAttribute('id', 'content');
     
     // Create Header children and adding classess
     const selectHeader = document.querySelector('header');
