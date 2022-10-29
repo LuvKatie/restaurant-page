@@ -1,6 +1,9 @@
 import { homePage } from './homepage.js';
 import { menuPage } from './menu.js';
-import './style.css';
+import '../styles/style.css';
+import '../styles/homepage.css';
+import '../styles/menupage.css';
+import '../styles/contactpage.css';
 
 let createPage = (function () {
     // Background image

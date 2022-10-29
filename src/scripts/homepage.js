@@ -1,4 +1,4 @@
-import HotPot from './hot-pot.png';
+import HotPot from '../hot-pot.png';
 
 export function homePage() {
     const homeContent = document.getElementById('home-content');
