@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/index.js',
-        pageload: './src/homepage.js'
+        homepage: './src/homepage.js',
+        menupage: './src/menu.js',
     },
     module: {
         rules: [
@@ -12,8 +13,13 @@ module.exports = {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ],
     },
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Output Management',

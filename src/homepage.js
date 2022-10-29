@@ -25,6 +25,7 @@ export function homePage() {
         homeContentContainer.classList.add(`home${i + 1}`);
     }
     
+    // Header on ' Home ' with image
     const homeHeaderSelect = document.querySelector('.home1');
     const homeHeaderH1 = document.createElement('h1');
 
@@ -34,4 +35,8 @@ export function homePage() {
     homeHeaderH1.innerHTML = 'Katie and Tony\'s Hot Pot';
 
     homeHeaderSelect.append(homeHeaderH1, hotpotIcon);
+
+    // Divs / Containers of ' Home '
+    const homeDescSelect = document.querySelector('.home2');
+    
 }
