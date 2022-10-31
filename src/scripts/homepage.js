@@ -10,26 +10,18 @@ export function homePage() {
     selectContent.classList.add('home-content');
     
     const homeContent = document.querySelector('.home-content');
-    const homeHeader = document.createElement('div');
-    const homeDesc = document.createElement('div');
-    const homeHours = document.createElement('div');
-    const homeLocation = document.createElement('div');
-    
-    [homeHeader, homeDesc, homeHours, homeLocation].forEach(e => {
-        e.classList.add('home');
-    });
-    
-    homeHeader.classList.add('header');
-    homeDesc.classList.add('desc');
-    homeHours.classList.add('hours');
-    homeLocation.classList.add('location');
-    
-    homeContent.append(homeHeader, homeDesc, homeHours, homeLocation);
-    
-    for (let i = 0; i < homeContent.childNodes.length; i++) {
-        const homeContentContainer = document.createElement('div');
-        homeContent.childNodes[i].appendChild(homeContentContainer)
-        homeContentContainer.classList.add(`home${i + 1}`);
+
+    for (let i = 0; i < 4; i++) {
+        let contentClasses = ['header', 'desc', 'hours', 'location'];
+        const createDiv = document.createElement('div');
+        homeContent.append(createDiv);
+
+        createDiv.classList.add('home', `${contentClasses[i]}`);
+
+        const divContent = document.createElement('div');
+        createDiv.append(divContent);
+        
+        divContent.classList.add(`home${i + 1}`);
     }
     
     // Header on ' Home ' with image
@@ -49,5 +41,5 @@ export function homePage() {
             div == selectHome ? selectHome.classList.add('selected') : div.classList.remove('selected');
         })
     }
-    
+
 }
