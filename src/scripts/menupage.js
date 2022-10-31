@@ -1,20 +1,13 @@
-export function removeAllChild() {
-    const homeContent = document.getElementById('content');
-    const contentLength = homeContent.childNodes.length;
-    for (let i = 0; i < contentLength; i++) {
-        homeContent.firstChild.remove();
-    }
-}
+import { removeAllChild, selectTab } from "./generalFN";
 
 export function menuPage() {
     removeAllChild();
+    selectTab(this);
     
     const homeContent = document.getElementById('content');
     
-    homeContent.classList.remove('home-content');
+    homeContent.removeAttribute('class');
     homeContent.classList.add('menu-content');
-
-    this.classList.add('selected');
 
     for (let i = 0; i < 7; i++) {
         const createDiv = document.createElement('div');
@@ -31,4 +24,7 @@ export function menuPage() {
     for (let i = 0; i < homeContent.childNodes.length; i++) {
         homeContent.childNodes[i].classList.add(menuContentClasses[i]);
     }
+
+    const menuHeader = document.querySelector('.menu.header > div');
+    menuHeader.innerHTML = 'Menu';
 }

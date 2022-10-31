@@ -1,5 +1,6 @@
 import { homePage } from './homepage.js';
 import { menuPage } from './menupage.js';
+import { selectTab } from './generalFN.js';
 import '../styles/style.css';
 import '../styles/homepage.css';
 import '../styles/menupage.css';
@@ -52,8 +53,9 @@ let createPage = (function () {
     }
 
     // Hook event listeners for each tab on Header
-    const menuSelect = document.querySelector('.menu-tab');
-    menuSelect.addEventListener('click', menuPage);
+    // const menuSelect = document.querySelector('.menu-tab');
+    menuTab.addEventListener('click', menuPage);
+    homeTab.addEventListener('click', homePage);
 
     // Footer credit
     // <a href="https://www.flaticon.com/free-icons/food" title="food icons">Food icons created by amonrat rungreangfangsai - Flaticon</a>
