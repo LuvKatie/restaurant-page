@@ -1,3 +1,9 @@
+.home-content {
+    grid-template: 1fr 2fr 4fr 1fr / 1fr;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
 .home.header {
     display: flex;
     justify-content: center;
@@ -14,8 +20,7 @@
 
     border: 5px solid forestgreen;
     border-radius: 12px;
-    background-color: palegreen;
-
+    background-color: rgba(152, 251, 152);
 
     padding: 5px 10px;
 }

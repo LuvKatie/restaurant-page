@@ -63,19 +63,18 @@ nav > div:hover {
     background-color: lightgreen;
 }
 
-#home-content {
+#content {
     display: grid;
+    justify-self: center;
 
-    grid-template: 1fr 2fr 4fr 1fr / 1fr;
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-
-    width: 100%;
+    width: 80%;
     height: 95%;
     
     border-radius: 80px;
-    background-color: AliceBlue;
+    background-color: aliceblue;
     opacity: 0.8;
+
+    padding-bottom: 20px;
 }
 
 #bg-container {

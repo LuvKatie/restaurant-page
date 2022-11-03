@@ -3,9 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index.js',
-        homepage: './src/homepage.js',
-        menupage: './src/menu.js',
+        index: './src/scripts/index.js',
+        homepage: './src/scripts/homepage.js',
+        menupage: './src/scripts/menupage.js',
+        contactpage: './src/scripts/contactpage.js',
+        generalFN: './src/scripts/generalFN.js'
     },
     module: {
         rules: [

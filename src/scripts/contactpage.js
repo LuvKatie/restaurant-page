@@ -18,4 +18,7 @@ export function contactPage() {
         const divContent = document.createElement('div');
         createDiv.append(divContent);
     }
+
+    const contactHeader = document.querySelector('.contact-header > div');
+    contactHeader.innerHTML = 'Contacts';
 }
